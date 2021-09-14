@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            padding: 0%;
+            font-family: sans-serif;
+            background-color: rgb(51, 51, 51);
+        }
+        .box{
+            position: absolute;
+            top: calc(50% - 200px);
+            left: calc(50% - 200px);
+            width: 400px;
+            height: 500px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+        }
+        audio{
+            margin-top: 0.5rem;
+        }
+        h3{
+            color: white;
+            text-align: center;
+        }
+        button{
+            margin-top: 10%;
+            height: 80px;
+            width: 80px;
+            font-size: larger;
+            font-weight: bold;
+            background-color: rgb(0, 255, 8);
+            border: none;
+            border-radius: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>Box play</h3>
+        <img src="https://ak.picdn.net/shutterstock/videos/2123375/thumb/1.jpg" width="200" height="200">
+        <h3>Audio1.mp3</h3>
+        <hr>
+        <nav>
+            <audio  src="audio1.mp3"></audio>
+            <button onclick="back()"> &#9198;</button>
+            <button onclick="play()">&#9199;</button>
+            <button id="pause" onclick="pause()" value="true">&#9208;</button>
+            <button onclick="next()">&#9197;</button>
+        </nav>
+    </div>
+<script src="script.js">
+
+</script>
+</body>
+</html>

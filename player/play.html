@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <audio  src="audio1.mp3"></audio>
+    <button onclick="back()">back</button>
+    <button onclick="play()">play</button>
+    <button onclick="pause()">pause</button>
+    <button onclick="next()">next</button>
+
+    <script>
+        var audio =  document.querySelector("audio")
+        var lista = ["audio1.mp3","audio2.mp3"]
+        var i = 0
+       function play() {
+           audio.play()
+       }
+       function pause() {
+           audio.pause()
+       }
+       function next() {
+           i++
+           if(i>=lista.length)
+           {
+               i = 0
+           }
+        audio.src = lista[i]
+        audio.play()
+       }
+       function back() {
+           i--
+           if(i<=lista.length)
+           {
+               i = 0
+           }
+
+           audio.src = lista[i]
+           audio.play()
+       }
+    </script>
+</body>
+</html>
